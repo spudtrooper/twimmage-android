@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DebugActivity"
+    tools:showIn="@layout/activity_debug">
+
+    <Button
+        android:id="@+id/clearTwitterNotificationsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear twitter notifications" />
+
+    <Button
+        android:id="@+id/showTwitterNotificationsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show twitter notifications" />
+
+    <Button
+        android:id="@+id/checkForTwitterNotificationsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check for twitter notifications" />
+
+    <Button
+        android:id="@+id/launchShareActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch share activity" />
+</LinearLayout>

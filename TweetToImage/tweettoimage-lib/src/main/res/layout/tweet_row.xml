@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:background="@android:color/background_light"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ago_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="2h"
+            android:textColor="@color/twitterGray"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/dash_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dash_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:textColor="@color/twitterGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ago_text"
+            app:layout_constraintRight_toLeftOf="@+id/date_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="May 30, 2018"
+            android:textColor="@color/twitterGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/dash_text"
+            app:layout_constraintRight_toLeftOf="@+id/dash2_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dash2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text=" - "
+            android:textColor="@color/twitterGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/date_text"
+            app:layout_constraintRight_toLeftOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/retweets_text"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dash2_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/retweet" />
+
+        <TextView
+            android:id="@+id/retweets_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/heartImageView"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/heartImageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/favorites_text"
+            app:layout_constraintLeft_toRightOf="@+id/favorites_text"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/retweets_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/heart" />
+
+        <TextView
+            android:id="@+id/favorites_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="129"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/heartImageView"
+            app:layout_constraintLeft_toRightOf="@+id/heartImageView"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/heartImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tweet_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_text"
+        android:fontFamily="sans-serif-condensed"
+        android:text="aslfk jaslfk jasdlfk jasdlfk jaslkdf asldkf alsdk falksd jfaskldj f"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
+</LinearLayout>
+

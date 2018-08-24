@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Twimmage</string>
+    <string name="your_tweet_has_reached_favorites">%d favorites!</string>
+    <string name="your_tweet_has_reached_retweets">%d retweets!</string>
+    <string name="elegant">Elegant</string>
+    <string name="elegantBottom">Elegant Bottom</string>
+</resources>

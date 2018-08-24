@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Twimmage</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="tw_login_hint">Twitter Login</string>
+    <string name="tw_logout_hint">Logout</string>
+    <string name="twitter_callback_url">https://tweettoimage.herokuapp.com/twitter/callback/</string>
+    <string name="welcome">Welcome back %s!</string>
+    <string name="already_logged">User already logged into twitter with %s.</string>
+    <string name="logged_out">Logout success</string>
+    <string name="loading_title">Loading…</string>
+    <string name="loading_tweets_title">Loading…</string>
+    <string name="loading_tweets_message">Tweets from \@%s…</string>
+    <string name="searching_users_title">Searching…</string>
+    <string name="searching_users_message">Users for %s…</string>
+    <string name="login_dialog_message">Logging in…</string>
+
+    <string name="loading_tweets_message_template">Loading tweets for %1$s…</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_list">Tweet to Image</string>
+    <string name="title_login_to_twitter_activity">Login to Twitter</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="screen_name_template">\@%s</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for
+        providing email completions."
+    </string>
+    <string name="preferences_title">Preferences</string>
+
+    <string name="time_minutes">%dm</string>
+    <string name="time_seconds">%ds</string>
+    <string name="time_hours">%dh</string>
+    <string name="time_days">%dd</string>
+    <string name="time_years">%dy</string>
+    <string name="logout">Logout</string>
+    <string name="reload">Reload</string>
+    <string name="settings">Settings</string>
+    <string name="amount_lt_e3">%d</string>
+    <string name="amount_lt_e6">%f.1k</string>
+    <string name="amount_lt_e9">%f.1M</string>
+    <string name="amount_lt_e12">%f.1B</string>
+    <string name="processing_tweet">Processing tweet from \@%s, so you can tweet this back to instagram</string>
+    <string name="home">Home</string>
+    <string name="log_in">Log in</string>
+    <string name="courier">Courier</string>
+    <string name="twitter">Twitter</string>
+    <string name="courier_inverted">Courier Inverted</string>
+    <string name="plain">Plain</string>
+    <string name="title_activity_create_test">CreateTestActivity</string>
+    <string name="channel_name">Twimmage</string>
+    <string name="channel_description">Twimmage images</string>
+    <string name="app_name_share">Twimmage // Share</string>
+    <string name="app_name_edit">Twimmage // Edit</string>
+    <string name="trump">Trump</string>
+    <string name="app_name_login">Twimmage // Log in</string>
+    <string name="search">Search</string>
+    <string name="app_name_search">Twimmage // Search</string>
+    <string name="date">date</string>
+    <string name="status">Status</string>
+    <string name="screenName">screenName</string>
+    <string name="or">-or-</string>
+    <string name="toc_message">
+    <![CDATA[
+
+        Images created from this app are for entertainment only. You expressly
+        agree that your use of this app is at your own risk and that you are
+        100% responsible for the images they create and 100% responsible for
+        communicating that these images are for entertainment.
+
+        See http://twimmage.com/privacy for privacy policy.
+
+        To use this app you must accept these terms.
+
+    ]]>
+    </string>
+    <string name="toc_title">Disclaimer</string>
+    <string name="terms_accepted">Terms accepted. Have fun!</string>
+    <string name="terms_rejected">Terms rejected; exiting now.</string>
+    <string name="reject">Reject</string>
+    <string name="disagree">Disagree</string>
+    <string name="accept">Accept</string>
+    <string name="title_activity_debug">Debug</string>
+    <string name="debug">Debug</string>
+    <string name="none">None</string>
+    <string name="custom">Custom</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ThreeColoredView">
+        <attr name="topColor" format="color" />
+        <attr name="middleColor" format="color" />
+        <attr name="bottomColor" format="color" />
+        <attr name="topColorHeightPercent" format="integer" />
+        <attr name="middleColorHeightPercent" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TwitterPreviewView">
+        <attr name="screenName" format="string" />
+        <attr name="name" format="string" />
+        <attr name="status" format="string" />
+        <attr name="createdAt" format="string" />
+    </declare-styleable>
+</resources>

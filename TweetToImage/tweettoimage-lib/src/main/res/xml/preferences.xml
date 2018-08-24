@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/preferences_title">
+
+    // Keys need to stay in sync with UserPrefs in Preferences.java
+    <PreferenceCategory
+        android:key="general"
+        android:title="General">
+        <ListPreference
+            android:defaultValue="Date"
+            android:entries="@array/SortType"
+            android:entryValues="@array/SortType"
+            android:key="pref_tweet_sort_type"
+            android:summary="%s"
+            android:title="Sort tweets by" />
+
+        <ListPreference
+            android:defaultValue="twitter"
+            android:entries="@array/Templates"
+            android:entryValues="@array/Templates"
+            android:key="pref_default_template"
+            android:summary="%s"
+            android:title="Default template" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_share_after_download"
+            android:title="Share after download" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_incremental_search"
+            android:title="Incremental search" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="notifications"
+        android:title="Notifications">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_notifications_enabled"
+            android:title="Enable notifications" />
+
+        <ListPreference
+            android:defaultValue="100"
+            android:entries="@array/MinRetweets"
+            android:entryValues="@array/MinRetweets"
+            android:key="pref_notifications_min_retweets"
+            android:summary="%s"
+            android:title="Notify after this many retweets" />
+
+        <ListPreference
+            android:defaultValue="100"
+            android:entries="@array/MinFavorites"
+            android:entryValues="@array/MinFavorites"
+            android:key="pref_notifications_min_favorites"
+            android:summary="%s"
+            android:title="Notify after this many favorites" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="SortType">
+        <item>Date</item>
+        <item># Favorites</item>
+        <item># Retweets</item>
+    </string-array>
+
+    <string-array name="Templates">
+        <item>twitter</item>
+        <item>courier</item>
+        <item>courierInverted</item>
+        <item>plain</item>
+    </string-array>
+
+    <string-array name="MinRetweets">
+        <item>"1"</item>
+        <item>"10"</item>
+        <item>"100"</item>
+        <item>"500"</item>
+        <item>"1000"</item>
+        <item>"10000"</item>
+        <item>"100000"</item>
+    </string-array>
+
+    <integer-array name="MinRetweetsValues">
+        <item>1</item>
+        <item>10</item>
+        <item>100</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>10000</item>
+        <item>100000</item>
+        <item>1000000</item>
+    </integer-array>
+
+    <string-array name="MinFavorites">
+        <item>"1"</item>
+        <item>"10"</item>
+        <item>"100"</item>
+        <item>"500"</item>
+        <item>"1000"</item>
+        <item>"10000"</item>
+        <item>"100000"</item>
+        <item>"1000000"</item>
+    </string-array>
+
+    <integer-array name="MinFavoritesValues">
+        <item>1</item>
+        <item>10</item>
+        <item>100</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>10000</item>
+        <item>100000</item>
+        <item>1000000</item>
+    </integer-array>
+</resources>

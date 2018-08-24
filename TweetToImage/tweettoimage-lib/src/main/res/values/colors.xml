@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4ea3de</color>
+    <color name="colorPrimaryDark">#394064</color>
+    <color name="colorAccent">#647786</color>
+    <color name="twitterBackground">#1da1f2</color>
+    <color name="twitterGray">#647786</color>
+    <color name="twitterBackgroundBottom">#e6ecf0</color>
+    <color name="twimmageBlue">#4ea3de</color>62ba60
+    <color name="twimmageGreen">#62ba60</color>
+    <color name="view_page_background_color">#ffffff</color>
+    <color name="view_page_border_color">#aeaeae</color>
+    <color name="menu_background_color">#ffffff</color>
+    <color name="studio_simpatico_color">#29375b</color>
+
+    <!-- TODO: This should be in the theme -->
+    <color name="background_light">#dddddd</color>
+    <color name="background_preview_border">#c2c2c2</color>
+</resources>

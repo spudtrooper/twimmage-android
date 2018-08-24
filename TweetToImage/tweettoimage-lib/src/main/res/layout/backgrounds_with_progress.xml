@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dip">
+
+    <ProgressBar
+        android:id="@+id/backgrounds_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <HorizontalScrollView
+        android:id="@+id/backgrounds_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/backgrounds_content"
+            android:layout_width="match_parent"
+            android:layout_height="58dip"
+            android:orientation="horizontal"
+            android:padding="4dp"></LinearLayout>
+    </HorizontalScrollView>
+</merge>

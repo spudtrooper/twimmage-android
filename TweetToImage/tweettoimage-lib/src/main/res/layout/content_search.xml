@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <!--
+tools:context=".SearchActivity"
+    tools:showIn="@layout/activity_search"
+-->
+
+    <LinearLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.jeffpalm.tweettoimage.widget.ClearableEditText
+            android:id="@+id/searchText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/text_field_background"
+            android:contentDescription="Search for twitter users"
+            android:drawableRight="@drawable/ic_remove"
+            android:ems="10"
+            android:fadingEdge="none|horizontal"
+            android:hint="Search for twitter users"
+            android:inputType="textPersonName"
+            android:padding="@dimen/text_field_padding"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/searchButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/searchList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/searchContainer" />
+
+
+</android.support.constraint.ConstraintLayout>

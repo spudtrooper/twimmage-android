@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_btn"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_preferences_btn"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_reload_btn"
+            android:icon="@drawable/ic_reload"
+            android:title="@string/reload" />
+        <item
+            android:id="@+id/nav_trump_btn"
+            android:icon="@drawable/ic_trump"
+            android:title="@string/trump" />
+        <item
+            android:id="@+id/nav_search_btn"
+            android:icon="@drawable/ic_search"
+            android:title="@string/search" />
+        <item
+            android:id="@+id/nav_debug_btn"
+            android:icon="@drawable/ic_debug"
+            android:title="@string/debug" />
+        <item
+            android:id="@+id/nav_logout_btn"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+
+</menu>

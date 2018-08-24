@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@color/twitterBackground"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    tools:background="@android:color/background_light">
+
+    <com.jeffpalm.tweettoimage.widget.ThreeColoredView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:bottomColor="@color/twitterBackgroundBottom"
+        app:middleColor="#FFFFFFFF"
+        app:middleColorHeightPercent="20"
+        app:topColor="@color/twimmageBlue"
+        app:topColorHeightPercent="40" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_image_view"
+        android:layout_width="120dp"
+        android:layout_height="@dimen/nav_image_height"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:gravity="bottom"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/twimmage" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/nav_image_view"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nav_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            android:text="Jeff Palmsdsff"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/nav_header_name_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nav_screen_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="spudtrooperfsdf"
+            android:textColor="@color/twitterGray"
+            android:textSize="@dimen/nav_header_screen_name_text_size" />
+    </LinearLayout>
+</RelativeLayout>
