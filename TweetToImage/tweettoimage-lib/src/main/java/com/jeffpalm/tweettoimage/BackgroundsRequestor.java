@@ -20,6 +20,7 @@ import com.jeffpalm.tweettoimage.util.Log;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -68,6 +69,10 @@ public final class BackgroundsRequestor {
 
           @Override
           public void onSuccess(GetBackgroundsResult result, String serializableBackgrounds) {
+            if (Objects.deepEquals(bootstrappedBackgrounds, result)) {
+              log.i("Skipping background reload, because cached backgrounds == new backgrounds");
+              return;
+            }
             callback.accept(createBackgrounds(result));
             new SaveBackgroundsTask().execute(serializableBackgrounds);
           }

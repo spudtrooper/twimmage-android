@@ -70,5 +70,33 @@ final class GetBackgroundsResultImpl implements GetBackgroundsResult {
           fullImageUrl).add("largeImageUrl", largeImageUrl).add("previewImageUrl",
           previewImageUrl).toString();
     }
+
+    @Override
+    public int hashCode() {
+      return id.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+      if (!(obj instanceof Background)) {
+        return false;
+      }
+      Background that = (Background) obj;
+      return getEquals().equals(this, that);
+    }
+  }
+
+  @Override
+  public int hashCode() {
+    return getBackgrounds().hashCode();
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (!(obj instanceof GetBackgroundsResult)) {
+      return false;
+    }
+    GetBackgroundsResult that = (GetBackgroundsResult) obj;
+    return getEquals().equals(this, that);
   }
 }

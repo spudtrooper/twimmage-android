@@ -85,10 +85,19 @@ public final class BackgroundsWithProgress extends LinearLayout {
     templatesContent.setVisibility(View.VISIBLE);
   }
 
+  /**
+   * Shows and clears existing backgrounds if present.
+   */
   public void showBackgrounds(BackgroundsProvider.Backgrounds backgrounds,
                               Consumer<Background> callback) {
     hideProgress();
+    clearExistingBackgrounds();
     new BackgroundButtonWrapper(callback).show(backgrounds);
+  }
+
+  private void clearExistingBackgrounds() {
+    ViewGroup backgroundsContent = findViewById(R.id.backgrounds_content);
+    backgroundsContent.removeAllViews();
   }
 
   public interface BitmapProvider {
