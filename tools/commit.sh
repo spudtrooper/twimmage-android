@@ -6,5 +6,6 @@ set -e
 
 git add .
 git commit -am "$@"
+git remote rm origin
 git remote add origin https://github.com/spudtrooper/twimmage-android.git
 git push -u origin master
