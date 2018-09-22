@@ -6,8 +6,8 @@ android {
         applicationId "com.jeffpalm.twimmage.fullapp"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 48
-        versionName "0.0.048"
+        versionCode 49
+        versionName "0.0.049"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

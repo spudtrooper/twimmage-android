@@ -12,6 +12,7 @@ import android.support.v4.content.FileProvider;
 import android.webkit.MimeTypeMap;
 
 import com.jeffpalm.tweettoimage.util.Assert;
+import com.jeffpalm.tweettoimage.util.ConsumerWithErrorHandler;
 import com.jeffpalm.tweettoimage.util.Log;
 import com.jeffpalm.tweettoimage.util.NotificationUtil;
 
@@ -74,19 +75,32 @@ final class WriterController {
   }
 
   private void writeToStorageAndShare(final Action action) {
-    hasSelectedInfo.getSelectedInfo(selectedInfo -> writeToStorageAndShare(action, selectedInfo));
+    hasSelectedInfo.getSelectedInfo(new ConsumerWithErrorHandler<SelectedInfo>() {
+      @Override
+      public void accept(SelectedInfo selectedInfo) {
+        writeToStorageAndShare(action, selectedInfo);
+      }
+
+      @Override
+      public void handleError(Throwable t) {
+        listener.onError(t);
+      }
+    });
   }
 
   private void writeToStorageAndShare(Action action, SelectedInfo selInfo) {
     // Write the image to a file.
     Assert.notNull(selInfo);
     log.d("selInfo: %s", selInfo);
-    String imageFileName = selInfo.getTemplate().getKey() + "-" + selInfo.getStatus().getId() + "" +
-        ".png";
+    String imageFileName = selInfo.getTemplate().getKey() + "-" + selInfo.getStatus().getId() +
+        "" + ".png";
     File outfile = new File(Environment.getExternalStoragePublicDirectory(Environment
         .DIRECTORY_DOWNLOADS),
         imageFileName);
     log.d("Writing to %s", outfile);
+    if (!outfile.getParentFile().exists()) {
+      outfile.getParentFile().mkdirs();
+    }
     try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(outfile))) {
       out.write(selInfo.getImageBytes());
     } catch (IOException e) {
@@ -138,8 +152,8 @@ final class WriterController {
 
   private Uri uriFromFile(File file) {
     return FileProvider.getUriForFile(context,
-        context.getApplicationContext().getPackageName() + ".com.jeffpalm" + ".tweettoimage" +
-            ".provider",
+        context.getApplicationContext().getPackageName() + ".com.jeffpalm" + ".tweettoimage" + ""
+            + ".provider",
         file);
   }
 
@@ -177,5 +191,7 @@ final class WriterController {
     void onStart();
 
     void onStop();
+
+    void onError(Throwable t);
   }
 }

@@ -13,10 +13,11 @@ import com.jeffpalm.tweettoimage.ImageRequestor;
 import com.jeffpalm.tweettoimage.SelectedInfo;
 import com.jeffpalm.tweettoimage.Template;
 import com.jeffpalm.tweettoimage.TemplatesProvider;
+import com.jeffpalm.tweettoimage.api.CreateJsonResult;
 import com.jeffpalm.tweettoimage.api.Status;
 import com.jeffpalm.tweettoimage.di.PerActivity;
 import com.jeffpalm.tweettoimage.util.Assert;
-import com.jeffpalm.tweettoimage.util.Consumer;
+import com.jeffpalm.tweettoimage.util.ConsumerWithErrorHandler;
 import com.jeffpalm.tweettoimage.util.ImageDownloader;
 import com.jeffpalm.tweettoimage.util.Log;
 import com.jeffpalm.tweettoimage.util.StatusAndTemplateKey;
@@ -118,13 +119,27 @@ public final class TemplatedImagePagerAdapter extends PagerAdapter implements Ha
   }
 
   @Override
-  public void getSelectedInfo(Consumer<SelectedInfo> callback) {
+  public void getSelectedInfo(ConsumerWithErrorHandler<SelectedInfo> callback) {
     int position = hasSelectedPosition.getSelectedPosition();
     final Template template = templatesProvider.getTemplates().get(position);
-    imageRequestor.requestImage(state.status, template, state.background, (s, r) -> {
-      SelectedInfo selInfo = new SelectedInfoImpl(template, r.getImageBytes(), s);
-      callback.accept(selInfo);
-    });
+    imageRequestor.requestImage(state.status,
+        template,
+        state.background,
+        new ImageRequestor.Callback() {
+          @Override
+          public void handleImageCreated(Status s, CreateJsonResult r) {
+            SelectedInfo selInfo = new SelectedInfoImpl(template, r.getImageBytes(), s);
+            callback.accept(selInfo);
+          }
+
+          @Override
+          public void handleError(Throwable t,
+                                  Status status,
+                                  Template template,
+                                  @Nullable Background background) {
+            callback.handleError(t);
+          }
+        });
   }
 
   @Override

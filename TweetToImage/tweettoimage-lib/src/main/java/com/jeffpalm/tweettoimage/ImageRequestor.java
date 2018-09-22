@@ -13,5 +13,10 @@ public interface ImageRequestor {
 
   interface Callback {
     void handleImageCreated(Status s, CreateJsonResult response);
+
+    void handleError(Throwable t,
+                     Status status,
+                     Template template,
+                     @Nullable Background background);
   }
 }

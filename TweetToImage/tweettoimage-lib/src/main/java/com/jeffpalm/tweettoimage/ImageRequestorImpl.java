@@ -27,8 +27,8 @@ final class ImageRequestorImpl implements ImageRequestor {
 
   @Override
   public void requestImage(final Status status,
-                           Template template,
-                           @Nullable Background background,
+                           final Template template,
+                           final @Nullable Background background,
                            final Callback callback) {
     api.createJson(status,
         twimmageUser.isLoggedIn() ? twimmageUser.getTwitterUser().getScreenName() : creatorId,
@@ -38,12 +38,21 @@ final class ImageRequestorImpl implements ImageRequestor {
 
           @Override
           public void onSuccess(CreateJsonResult result) {
+            log.i("Loaded JSON for status[%s], template[%s], background[%s]",
+                status,
+                template,
+                background);
             callback.handleImageCreated(status, result);
           }
 
           @Override
           public void onError(Throwable error) {
-            log.e(error, "Requesting JSON");
+            log.e(error,
+                "Error loading JSON for status[%s], template[%s], background[%s]",
+                status,
+                template,
+                background);
+            callback.handleError(error, status, template, background);
           }
         });
   }

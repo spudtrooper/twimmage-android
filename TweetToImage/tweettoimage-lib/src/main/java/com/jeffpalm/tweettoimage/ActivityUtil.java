@@ -17,6 +17,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.common.base.Strings;
 import com.jeffpalm.tweettoimage.api.Status;
@@ -132,6 +133,15 @@ public final class ActivityUtil {
 
       @Override
       public void onStop() {
+        showProgress(false);
+      }
+
+      @Override
+      public void onError(Throwable t) {
+        log.e(t, "Could not share: %s", t);
+        Toast.makeText(context,
+            String.format("Could not share: %s", t.getMessage()),
+            Toast.LENGTH_LONG).show();
         showProgress(false);
       }
     });
